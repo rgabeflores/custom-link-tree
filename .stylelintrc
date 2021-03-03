@@ -1,0 +1,15 @@
+{
+  "rules": {
+    "indentation": [
+      4,
+      {
+        "except": ["value"],
+        "severity": "warning"
+      }
+    ]
+  },
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-styled-components"
+  ]
+}
