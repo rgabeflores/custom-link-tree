@@ -1,38 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 .App {
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    align-content: center;
+    align-content: space-around;
+    overflow-y: scroll;
+    height: 100vh;
+    width: 100vw;
+    background: #000;
+    background: radial-gradient(#000, #000, #121212);
+    background: radial-gradient(#000, #000, #121212);
+    font-family: 'Montserrat', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Old */
+.links-list-header {
+    display: flex;
+    height: 15vh;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    align-content: center;
+    align-content: space-around;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.links-list-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    align-content: center;
+    align-content: space-around;
+    overflow-y: scroll;
+    margin: auto;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    width: 75vw;
+    border-radius: 0.25em;
+    box-shadow: inset 4px 4px 25px 0 rgba(0, 0, 0, 0.75);
+    background: #2980b9;  /* fallback for old browsers */
+    background: linear-gradient(to right, #2c3e50, #2980b9);  /* Chrome 10-25, Safari 5.1-6 */
+    background-size: 400% 400%;
+    animation: gradient 4s ease infinite;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.links-list-title {
+    font-size: 2rem;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    color: #f1f1f1;
+    text-shadow: 1px 1px 2px rgba(11, 11, 11, 0.75);
 }
 
-.App-link {
-  color: #61dafb;
+.links-list-container > .ant-divider {
+    width: 100%;
+    border-color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.links-list-container > .links-list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    align-content: space-between;
+    overflow-wrap: normal;
+    max-width: 50vw;
+}
+
+.links-list-container > .links-list > li {
+    display: flex;
+    margin-top: 1.25vh;
+    margin-bottom: 1.25vh;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
+
+.links-list-container > .links-list > li > .ant-btn-link {
+    border: 1px solid rgba(255, 255, 255, 1);
+    box-shadow: 2px 4px 5px 0 rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.25);
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    width: 50vw;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px rgba(11, 11, 11, 0.5);
+    letter-spacing: 2px;
+    color: #f1f1f1;
+    transition: 0.3s;
+}
+
+.links-list-container > .links-list > li > .ant-btn-link:hover {
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 2px 4px 5px 0 rgba(255, 255, 255, 0.4);
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
